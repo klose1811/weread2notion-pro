@@ -51,6 +51,7 @@ class NotionHelper:
         for key in self.database_name_dict.keys():
             if os.getenv(key) != None and os.getenv(key) != "":
                 self.database_name_dict[key] = os.getenv(key)
+        print(f"{self.database_id_dict}")
         self.book_database_id = self.database_id_dict.get(
             self.database_name_dict.get("BOOK_DATABASE_NAME")
         )
